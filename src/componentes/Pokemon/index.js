@@ -55,7 +55,7 @@ export default class Pokemon extends Component {
             ))}
           </div>
         ) : (
-          console.log("error ao carregar pokemons na página")
+          console.log("Error ao carregar pokemons na página")
         )}
       </div>
     );
