@@ -29,10 +29,13 @@ export default class Pokemon extends Component {
       let { name, url } = poke;
       let id = this.getId(url);
 
+      let responseDetails = await pokeApi.get(`/pokemon/${id}`);
+
       arrayPokemon.push({
         name: name,
         url: url,
-        id: id
+        id: id,
+        pokemonDetails: responseDetails.data
       });
     }
 
